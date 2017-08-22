@@ -17,6 +17,10 @@ public class CourseDTO {
         this.courseCredit = courseCredit;
     }
 
+    public CourseDTO() {
+        //default constructor
+    }
+
     public String getCourseTitle() {
         return courseTitle;
     }

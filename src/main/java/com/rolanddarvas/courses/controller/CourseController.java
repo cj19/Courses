@@ -38,7 +38,7 @@ public class CourseController extends BaseRestController {
         return RestResponse.ok(courseService.getCourseById(courseId));
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/{courseId")
+    @RequestMapping(method = RequestMethod.PUT, value = "/{courseId}")
     public RestResponse updateCourse(@PathVariable long courseId, @RequestBody CourseDTO courseDTO) {
         if (courseDTO != null) {
             courseService.update(courseId, courseDTO);
@@ -48,7 +48,7 @@ public class CourseController extends BaseRestController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/{courseId)")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{courseId}")
     public RestResponse deleteCourse(@PathVariable long courseId) {
         courseService.deleteById(courseId);
         return RestResponse.ok();

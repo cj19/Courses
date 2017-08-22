@@ -26,8 +26,7 @@ public class CourseService {
     }
 
     public void update(Long courseId, CourseDTO courseDTO) {
-        Course course = new Course();
-        course.setId(courseId);
+        Course course = getCourseById(courseId);
         course.setCourseCredit(courseDTO.getCourseCredit());
         course.setCourseDescription(courseDTO.getCourseDescription());
         course.setCourseTitle(courseDTO.getCourseTitle());
